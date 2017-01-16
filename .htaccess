@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+   RewriteEngine on
+
+   # Uncomment if you want to force https
+   # RewriteCond %{HTTPS} !=on
+   # RewriteRule ^/?(.*) https://%{SERVER_NAME}/$1 [R,L]
+
+   RewriteBase /
+   RewriteCond %{REQUEST_FILENAME} !-f
+   RewriteCond %{REQUEST_FILENAME} !-d
+   RewriteRule ^([^/]+)/([^/]+)$ i.php?b=$1&i=$2 [L]
+</IfModule>
