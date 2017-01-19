@@ -1,4 +1,4 @@
-# quick-image-upload
+# simple-image-share
 
 Simple pin/password-protected, self hosted image uploader with file-lifetime management.
 
@@ -19,11 +19,11 @@ Simple pin/password-protected, self hosted image uploader with file-lifetime man
 
 ### Configure automatic image cleanup
 
-quick-image-upload comes with functionality to regularly clean up your data
+simple-image-share comes with functionality to regularly clean up your data
 directory. Since images can be uploaded with a lifetime of "a day", "a year"
 "a month" or "unlimited" some housekeeper has to clean the old cruft, and that's
 what `inc/cron.php` is for.
 
 To use it, you have to configure a secret in 'inc/conf.inc.php' and create a cron-
-job for `https://<path to quick-image-uploader>/inc/cron.php?secret=<yoursecret>`.
+job for `https://<path to simple-image-share>/inc/cron.php?secret=<yoursecret>`.
 
